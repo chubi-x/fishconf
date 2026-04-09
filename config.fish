@@ -19,7 +19,7 @@ if status is-interactive
     alias g='git'
     alias d='docker'
     alias r='rails'
-    alias bat='batcat'
+    alias cat='batcat'
     alias lzg='lazygit'
     alias lzd='lazydocker'
 
@@ -35,5 +35,8 @@ if status is-interactive
     export PATH="./bin:$HOME/.local/bin:$HOME/.local/share/omakub/bin:$HOME/.cargo/bin:$PATH"
 
     export OMAKUB_PATH="$HOME/.local/share/omakub"
+    export EDITOR="nvim"
 end
 zoxide init --cmd cd fish | source
+tide configure --auto --style=Rainbow --prompt_colors='True color' --show_time='12-hour format' --rainbow_prompt_separators=Round --powerline_prompt_heads=Sharp --powerline_prompt_tails=Flat --powerline_prompt_style='Two lines, character and frame' --prompt_connection=Dotted --powerline_right_prompt_frame=Yes --prompt_connection_andor_frame_color=Light --prompt_spacing=Sparse --icons='Many icons' --transient=No
+set -g fish_key_bindings fish_vi_key_bindings
